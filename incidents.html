@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maritime Incidents — Smart Incident Indicator. Track and analyze active maritime incidents worldwide.">
+    <title>Incidents — Smart Incident Indicator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <div class="page-loader" id="page-loader"><div class="page-loader__content"><div class="page-loader__spinner"></div><p class="page-loader__text">Loading Incidents...</p></div></div>
+    <div class="app-layout">
+        <div id="sidebar-container"></div>
+        <div class="main-content">
+            <div id="navbar-container"></div>
+            <main class="page-content" role="main">
+                <div class="breadcrumbs">
+                    <a href="/dashboard" class="breadcrumbs__item">Dashboard</a>
+                    <span class="breadcrumbs__separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="breadcrumbs__item breadcrumbs__item--active">Incidents</span>
+                </div>
+                <div class="page-header">
+                    <div class="page-header__left">
+                        <h1 class="page-header__title">Maritime Incidents</h1>
+                        <p class="page-header__subtitle">Monitor and respond to active maritime incidents worldwide</p>
+                    </div>
+                </div>
+                <!-- Filters -->
+                <div class="filters-bar">
+                    <input type="text" class="form-input search-input" id="incident-search" placeholder="Search incidents..." style="max-width: 300px;">
+                    <select class="form-select" id="severity-filter">
+                        <option value="">All Severity</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <select class="form-select" id="status-filter">
+                        <option value="">All Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Monitoring">Monitoring</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                </div>
+                <!-- Incident Cards -->
+                <div class="incident-cards" id="incidents-list"></div>
+                <!-- Pagination -->
+                <div class="pagination" id="incidents-pagination"></div>
+                <!-- Incident Detail Modal -->
+                <div class="modal-overlay" id="incident-modal">
+                    <div class="modal" style="max-width: 750px;">
+                        <div class="modal__header">
+                            <h2 class="modal__title" id="modal-title"></h2>
+                            <button class="modal__close" id="modal-close"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div id="modal-content"></div>
+                    </div>
+                </div>
+            </main>
+            <div id="footer-container"></div>
+        </div>
+    </div>
+    <script type="module" src="/assets/js/app.js"></script>
+    <script type="module" src="/assets/js/incidents.js"></script>
+</body>
+</html>

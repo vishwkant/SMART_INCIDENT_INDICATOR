@@ -1,0 +1,497 @@
+[
+    {
+        "id": "INC001",
+        "title": "Severe Tropical Cyclone in Bay of Bengal",
+        "severity": "critical",
+        "country": "India",
+        "port": "Port of Mumbai (JNPT)",
+        "portId": "PORT012",
+        "coordinates": [18.9500, 72.9500],
+        "detectedTime": "2026-06-24T02:15:00Z",
+        "source": "Indian Meteorological Department",
+        "status": "Active",
+        "description": "Category 4 tropical cyclone with sustained winds of 230 km/h approaching Mumbai coast. All port operations suspended. Vessels advised to seek shelter or divert. Storm surge warning of 3-5 meters issued for coastal areas.",
+        "affectedPorts": ["PORT012", "PORT011", "PORT029"],
+        "relatedShipments": ["SHP001", "SHP005", "SHP012"],
+        "timeline": [
+            { "time": "2026-06-23T18:00:00Z", "event": "Cyclone formed in Bay of Bengal", "type": "info" },
+            { "time": "2026-06-23T22:00:00Z", "event": "Upgraded to Category 3", "type": "warning" },
+            { "time": "2026-06-24T02:15:00Z", "event": "Port operations suspended at JNPT", "type": "critical" },
+            { "time": "2026-06-24T04:00:00Z", "event": "Vessel diversion orders issued", "type": "critical" }
+        ],
+        "recommendedActions": [
+            "Immediately reroute all inbound vessels to alternate ports (Mundra or Cochin)",
+            "Notify affected shippers of 5-7 day delay estimates",
+            "Activate contingency warehousing at inland facilities",
+            "Monitor cyclone trajectory updates every 3 hours"
+        ]
+    },
+    {
+        "id": "INC002",
+        "title": "Armed Piracy Attack Near Gulf of Aden",
+        "severity": "critical",
+        "country": "Yemen",
+        "port": "Port of Aden",
+        "portId": "PORT018",
+        "coordinates": [12.7855, 45.0187],
+        "detectedTime": "2026-06-24T01:30:00Z",
+        "source": "IMB Piracy Reporting Centre",
+        "status": "Active",
+        "description": "Two commercial vessels attacked by armed pirates approximately 120 nautical miles south of Aden. One vessel boarded and crew held hostage. Coalition naval forces responding. All vessels advised to maintain maximum distance from reported coordinates.",
+        "affectedPorts": ["PORT018", "PORT019", "PORT045"],
+        "relatedShipments": ["SHP003", "SHP008", "SHP015"],
+        "timeline": [
+            { "time": "2026-06-24T00:45:00Z", "event": "Distress signal received from MV Pacific Dawn", "type": "critical" },
+            { "time": "2026-06-24T01:00:00Z", "event": "Second vessel MV Atlantic Star reports approach by armed skiffs", "type": "critical" },
+            { "time": "2026-06-24T01:30:00Z", "event": "IMB confirms piracy attack in progress", "type": "critical" },
+            { "time": "2026-06-24T02:00:00Z", "event": "Naval patrol dispatched from Djibouti", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Reroute all vessels via Cape of Good Hope corridor",
+            "Activate onboard security protocols for vessels in the region",
+            "Coordinate with naval escorts for high-value cargo",
+            "Issue crew safety advisory for all vessels within 200nm radius"
+        ]
+    },
+    {
+        "id": "INC003",
+        "title": "Port Workers Strike at Rotterdam",
+        "severity": "high",
+        "country": "Netherlands",
+        "port": "Port of Rotterdam",
+        "portId": "PORT003",
+        "coordinates": [51.9225, 4.47917],
+        "detectedTime": "2026-06-23T22:00:00Z",
+        "source": "Port Authority Rotterdam",
+        "status": "Active",
+        "description": "Dockworkers union has declared an indefinite strike affecting all container terminal operations. Estimated 15,000 TEUs of cargo affected daily. Negotiations between union and port management are ongoing with no resolution in sight.",
+        "affectedPorts": ["PORT003", "PORT004", "PORT005"],
+        "relatedShipments": ["SHP002", "SHP009", "SHP018"],
+        "timeline": [
+            { "time": "2026-06-23T08:00:00Z", "event": "Union issues 48-hour strike notice", "type": "warning" },
+            { "time": "2026-06-23T18:00:00Z", "event": "Last-minute negotiations fail", "type": "warning" },
+            { "time": "2026-06-23T22:00:00Z", "event": "Strike begins — all operations halted", "type": "critical" }
+        ],
+        "recommendedActions": [
+            "Divert vessels to Antwerp or Hamburg terminals",
+            "Expedite customs clearance for pre-strike arrived cargo",
+            "Notify all booked shippers of potential 3-5 day delays",
+            "Prepare alternative routing plans for European hub traffic"
+        ]
+    },
+    {
+        "id": "INC004",
+        "title": "Collision Between Container Ships in Singapore Strait",
+        "severity": "high",
+        "country": "Singapore",
+        "port": "Port of Singapore",
+        "portId": "PORT001",
+        "coordinates": [1.2200, 103.8500],
+        "detectedTime": "2026-06-24T03:45:00Z",
+        "source": "Maritime and Port Authority of Singapore",
+        "status": "Active",
+        "description": "Two container vessels collided in the eastbound lane of Singapore Strait causing partial channel blockage. Minor fuel spill detected. Traffic management system activated with reduced speed limits. Salvage operations expected to take 48-72 hours.",
+        "affectedPorts": ["PORT001", "PORT015"],
+        "relatedShipments": ["SHP004", "SHP007", "SHP021"],
+        "timeline": [
+            { "time": "2026-06-24T03:30:00Z", "event": "Collision detected by VTS", "type": "critical" },
+            { "time": "2026-06-24T03:45:00Z", "event": "Emergency response teams deployed", "type": "warning" },
+            { "time": "2026-06-24T04:00:00Z", "event": "Eastbound lane restricted to one-way traffic", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Expect 12-24 hour delays for Singapore-bound traffic",
+            "Consider Tanjung Pelepas as alternative transshipment hub",
+            "Monitor oil spill containment updates",
+            "Adjust vessel schedules for reduced strait capacity"
+        ]
+    },
+    {
+        "id": "INC005",
+        "title": "Earthquake Damages Port of Manila Infrastructure",
+        "severity": "critical",
+        "country": "Philippines",
+        "port": "Port of Manila",
+        "portId": "PORT033",
+        "coordinates": [14.5865, 120.9648],
+        "detectedTime": "2026-06-23T14:20:00Z",
+        "source": "PHIVOLCS / Philippine Coast Guard",
+        "status": "Active",
+        "description": "6.8 magnitude earthquake struck near Manila causing significant structural damage to pier facilities and crane infrastructure. Two berths collapsed. Tsunami advisory briefly issued then cancelled. Full port closure enacted pending structural assessment.",
+        "affectedPorts": ["PORT033"],
+        "relatedShipments": ["SHP010", "SHP019", "SHP025"],
+        "timeline": [
+            { "time": "2026-06-23T14:12:00Z", "event": "6.8M earthquake detected — epicenter 45km SW of Manila", "type": "critical" },
+            { "time": "2026-06-23T14:20:00Z", "event": "Port of Manila closed for all operations", "type": "critical" },
+            { "time": "2026-06-23T15:00:00Z", "event": "Tsunami advisory issued and later cancelled", "type": "warning" },
+            { "time": "2026-06-23T18:00:00Z", "event": "Structural assessment teams deployed", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Divert all Manila-bound vessels to Subic Bay or Cebu",
+            "Activate force majeure clauses for affected contracts",
+            "Coordinate with local authorities for relief cargo priority",
+            "Expect 2-4 week port closure minimum"
+        ]
+    },
+    {
+        "id": "INC006",
+        "title": "Suspicious Mine Sighting in Black Sea",
+        "severity": "critical",
+        "country": "Ukraine",
+        "port": "Port of Odessa",
+        "portId": "PORT026",
+        "coordinates": [46.4775, 30.7326],
+        "detectedTime": "2026-06-23T10:00:00Z",
+        "source": "NATO Maritime Command",
+        "status": "Active",
+        "description": "Multiple drifting naval mines reported in the northwestern Black Sea shipping lanes. Mine countermeasure vessels deployed. All commercial shipping suspended in a 50nm exclusion zone around reported positions.",
+        "affectedPorts": ["PORT026"],
+        "relatedShipments": ["SHP014"],
+        "timeline": [
+            { "time": "2026-06-23T08:30:00Z", "event": "Turkish coast guard reports mine sighting", "type": "critical" },
+            { "time": "2026-06-23T10:00:00Z", "event": "NATO establishes 50nm exclusion zone", "type": "critical" },
+            { "time": "2026-06-23T14:00:00Z", "event": "Mine countermeasure vessels deployed", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Suspend all Black Sea transit operations immediately",
+            "Reroute grain exports through Romanian or Bulgarian ports",
+            "Obtain updated war risk insurance coverage",
+            "Monitor NATO SHIPPING advisory updates"
+        ]
+    },
+    {
+        "id": "INC007",
+        "title": "Severe Fog Causing Delays at Busan",
+        "severity": "medium",
+        "country": "South Korea",
+        "port": "Port of Busan",
+        "portId": "PORT008",
+        "coordinates": [35.0961, 129.0365],
+        "detectedTime": "2026-06-24T05:00:00Z",
+        "source": "Korea Meteorological Administration",
+        "status": "Active",
+        "description": "Dense fog with visibility below 200 meters affecting Busan port approaches and harbor. Pilot services suspended until visibility improves. 23 vessels currently at anchor awaiting berth clearance.",
+        "affectedPorts": ["PORT008"],
+        "relatedShipments": ["SHP006", "SHP016"],
+        "timeline": [
+            { "time": "2026-06-24T04:00:00Z", "event": "Dense fog advisory issued", "type": "warning" },
+            { "time": "2026-06-24T05:00:00Z", "event": "Pilot operations suspended", "type": "warning" }
+        ],
+        "recommendedActions": [
+            "Delay berthing schedules by 12-18 hours",
+            "Notify downstream ports of cascading delays",
+            "Activate fog delay protocol for documentation"
+        ]
+    },
+    {
+        "id": "INC008",
+        "title": "Oil Tanker Fire at Port of Bandar Abbas",
+        "severity": "high",
+        "country": "Iran",
+        "port": "Port of Bandar Abbas",
+        "portId": "PORT044",
+        "coordinates": [27.1865, 56.2808],
+        "detectedTime": "2026-06-23T19:30:00Z",
+        "source": "Iranian Maritime Authority",
+        "status": "Active",
+        "description": "Large oil tanker caught fire during loading operations at berth 7. Fire suppression teams from three agencies responding. Adjacent berths evacuated. Partial port closure affecting petroleum and LNG operations.",
+        "affectedPorts": ["PORT044"],
+        "relatedShipments": ["SHP011"],
+        "timeline": [
+            { "time": "2026-06-23T19:15:00Z", "event": "Fire detected on tanker during loading", "type": "critical" },
+            { "time": "2026-06-23T19:30:00Z", "event": "Adjacent berths evacuated", "type": "warning" },
+            { "time": "2026-06-23T21:00:00Z", "event": "Fire partially contained — no crew injuries reported", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Divert petroleum cargo to Fujairah or Sohar port",
+            "Assess environmental impact and comply with local regulations",
+            "Prepare insurance claims for affected cargo"
+        ]
+    },
+    {
+        "id": "INC009",
+        "title": "Customs Systems Outage at Hong Kong",
+        "severity": "medium",
+        "country": "China",
+        "port": "Port of Hong Kong",
+        "portId": "PORT009",
+        "coordinates": [22.2860, 114.1400],
+        "detectedTime": "2026-06-24T06:00:00Z",
+        "source": "Hong Kong Customs and Excise Department",
+        "status": "Active",
+        "description": "Electronic customs clearance system experiencing intermittent failures causing delays in cargo processing. Manual fallback procedures activated but processing capacity reduced by approximately 60%.",
+        "affectedPorts": ["PORT009"],
+        "relatedShipments": ["SHP013", "SHP022"],
+        "timeline": [
+            { "time": "2026-06-24T05:30:00Z", "event": "System intermittency first reported", "type": "warning" },
+            { "time": "2026-06-24T06:00:00Z", "event": "Manual processing activated", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Pre-stage all documentation for manual processing",
+            "Expect 24-48 hour customs clearance delays",
+            "Consider Shenzhen as alternative clearance point"
+        ]
+    },
+    {
+        "id": "INC010",
+        "title": "Container Spill and Hazmat Leak at Durban",
+        "severity": "high",
+        "country": "South Africa",
+        "port": "Port of Durban",
+        "portId": "PORT021",
+        "coordinates": [-29.8587, 31.0218],
+        "detectedTime": "2026-06-23T16:45:00Z",
+        "source": "Transnet National Ports Authority",
+        "status": "Active",
+        "description": "Stack collapse during heavy winds caused 14 containers to fall, rupturing two containers carrying hazardous chemical cargo. Exclusion zone of 500m established around container yard section B. Port operating at 70% capacity.",
+        "affectedPorts": ["PORT021"],
+        "relatedShipments": ["SHP017", "SHP024"],
+        "timeline": [
+            { "time": "2026-06-23T16:30:00Z", "event": "Container stack collapse during 80 km/h wind gusts", "type": "critical" },
+            { "time": "2026-06-23T16:45:00Z", "event": "Hazmat leak detected — exclusion zone established", "type": "critical" },
+            { "time": "2026-06-23T18:00:00Z", "event": "Hazmat response team begins containment", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Reroute hazmat cargo to Cape Town if possible",
+            "Review container stacking protocols for wind conditions",
+            "File incident report with hazmat regulatory authority"
+        ]
+    },
+    {
+        "id": "INC011",
+        "title": "Typhoon Warning for South China Sea",
+        "severity": "medium",
+        "country": "Vietnam",
+        "port": "Port of Ho Chi Minh",
+        "portId": "PORT032",
+        "coordinates": [10.7670, 106.7094],
+        "detectedTime": "2026-06-24T07:00:00Z",
+        "source": "Vietnam Meteorological Administration",
+        "status": "Monitoring",
+        "description": "Tropical storm forming east of Vietnam with potential to intensify to typhoon strength within 48 hours. Ports in southern Vietnam on heightened alert. No operations suspended yet but preparations underway.",
+        "affectedPorts": ["PORT032", "PORT031"],
+        "relatedShipments": ["SHP020", "SHP023"],
+        "timeline": [
+            { "time": "2026-06-24T06:00:00Z", "event": "Tropical depression identified", "type": "info" },
+            { "time": "2026-06-24T07:00:00Z", "event": "Storm watch issued for southern Vietnam", "type": "warning" }
+        ],
+        "recommendedActions": [
+            "Begin pre-positioning of port equipment and securing loose cargo",
+            "Accelerate vessel loading/unloading operations",
+            "Prepare vessel shelter plans"
+        ]
+    },
+    {
+        "id": "INC012",
+        "title": "Congestion Crisis at Port of Shanghai",
+        "severity": "medium",
+        "country": "China",
+        "port": "Port of Shanghai",
+        "portId": "PORT002",
+        "coordinates": [31.2304, 121.4737],
+        "detectedTime": "2026-06-23T12:00:00Z",
+        "source": "Shanghai International Port Group",
+        "status": "Active",
+        "description": "Record congestion with 87 vessels waiting at anchor, average wait time 4.5 days. Peak season volume combined with equipment shortage causing significant backlog across all terminals.",
+        "affectedPorts": ["PORT002", "PORT048"],
+        "relatedShipments": ["SHP026", "SHP029"],
+        "timeline": [
+            { "time": "2026-06-22T08:00:00Z", "event": "Vessel queue exceeds 70 ships", "type": "warning" },
+            { "time": "2026-06-23T12:00:00Z", "event": "Wait time reaches 4.5 days average", "type": "warning" }
+        ],
+        "recommendedActions": [
+            "Consider Ningbo-Zhoushan as alternative discharge port",
+            "Negotiate priority berthing with terminal operators",
+            "Adjust supply chain schedules for 5-day buffer"
+        ]
+    },
+    {
+        "id": "INC013",
+        "title": "Drone Incursion Disrupts Port of Dubai Operations",
+        "severity": "medium",
+        "country": "UAE",
+        "port": "Port of Dubai (Jebel Ali)",
+        "portId": "PORT010",
+        "coordinates": [25.0137, 55.0691],
+        "detectedTime": "2026-06-24T01:00:00Z",
+        "source": "Dubai Maritime Authority",
+        "status": "Resolved",
+        "description": "Unauthorized drone activity detected over the port restricted airspace causing temporary suspension of crane operations for 4 hours. Security forces neutralized the threat. Operations have resumed with enhanced surveillance.",
+        "affectedPorts": ["PORT010"],
+        "relatedShipments": ["SHP028"],
+        "timeline": [
+            { "time": "2026-06-24T00:30:00Z", "event": "Unauthorized drone detected over terminal 3", "type": "warning" },
+            { "time": "2026-06-24T01:00:00Z", "event": "Crane operations suspended as precaution", "type": "warning" },
+            { "time": "2026-06-24T04:30:00Z", "event": "Threat neutralized — operations resumed", "type": "info" }
+        ],
+        "recommendedActions": [
+            "No further action needed — incident resolved",
+            "Request updated port security status before arrival",
+            "Verify no cargo handling delays from suspension period"
+        ]
+    },
+    {
+        "id": "INC014",
+        "title": "Fuel Shortage at Port of Mombasa",
+        "severity": "low",
+        "country": "Kenya",
+        "port": "Port of Mombasa",
+        "portId": "PORT027",
+        "coordinates": [-4.0435, 39.6682],
+        "detectedTime": "2026-06-23T08:00:00Z",
+        "source": "Kenya Ports Authority",
+        "status": "Monitoring",
+        "description": "Bunkering fuel stocks running low due to supply chain disruptions. Vessels requiring refueling may face 2-3 day delays. Alternative bunkering available at Dar es Salaam.",
+        "affectedPorts": ["PORT027"],
+        "relatedShipments": ["SHP030"],
+        "timeline": [
+            { "time": "2026-06-23T08:00:00Z", "event": "Fuel reserve drops below critical threshold", "type": "warning" }
+        ],
+        "recommendedActions": [
+            "Pre-arrange bunkering at alternative ports",
+            "Calculate fuel consumption for extended voyage if bypassing Mombasa"
+        ]
+    },
+    {
+        "id": "INC015",
+        "title": "Cargo Theft Ring Busted at Santos",
+        "severity": "low",
+        "country": "Brazil",
+        "port": "Port of Santos",
+        "portId": "PORT022",
+        "coordinates": [-23.9619, -46.3042],
+        "detectedTime": "2026-06-22T20:00:00Z",
+        "source": "Brazilian Federal Police",
+        "status": "Resolved",
+        "description": "Brazilian Federal Police dismantled an organized cargo theft ring operating within the port. Enhanced security screening now in effect causing minor processing delays.",
+        "affectedPorts": ["PORT022"],
+        "relatedShipments": [],
+        "timeline": [
+            { "time": "2026-06-22T18:00:00Z", "event": "Police raid on port warehouse facilities", "type": "info" },
+            { "time": "2026-06-22T20:00:00Z", "event": "12 suspects arrested — stolen goods recovered", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Verify integrity of any stored cargo at Santos",
+            "Request detailed cargo inspection for high-value shipments"
+        ]
+    },
+    {
+        "id": "INC016",
+        "title": "IT Ransomware Attack on Antwerp Terminal Systems",
+        "severity": "high",
+        "country": "Belgium",
+        "port": "Port of Antwerp",
+        "portId": "PORT004",
+        "coordinates": [51.2194, 4.4025],
+        "detectedTime": "2026-06-24T00:30:00Z",
+        "source": "Antwerp Port Authority / CERT-BE",
+        "status": "Active",
+        "description": "Major ransomware attack has encrypted terminal operating systems at two Antwerp container terminals. Gate operations offline, automated stacking cranes non-functional. Manual operations providing minimal throughput.",
+        "affectedPorts": ["PORT004"],
+        "relatedShipments": ["SHP009", "SHP027"],
+        "timeline": [
+            { "time": "2026-06-23T23:00:00Z", "event": "Anomalous network activity detected", "type": "warning" },
+            { "time": "2026-06-24T00:30:00Z", "event": "Ransomware confirmed — systems isolated", "type": "critical" },
+            { "time": "2026-06-24T03:00:00Z", "event": "Cybersecurity incident response team deployed", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Divert vessels to Rotterdam or Zeebrugge",
+            "Verify electronic documentation backups exist",
+            "Engage cybersecurity insurance coverage",
+            "Expect 5-10 day recovery timeline for full operations"
+        ]
+    },
+    {
+        "id": "INC017",
+        "title": "Flooding at Port of Chittagong",
+        "severity": "medium",
+        "country": "Bangladesh",
+        "port": "Port of Chittagong",
+        "portId": "PORT028",
+        "coordinates": [22.3569, 91.7832],
+        "detectedTime": "2026-06-23T20:00:00Z",
+        "source": "Chittagong Port Authority",
+        "status": "Active",
+        "description": "Monsoon-related flooding has inundated low-lying areas of the port compound. Container yard sections C and D partially submerged. Road access to the port restricted. Port operating at 50% capacity.",
+        "affectedPorts": ["PORT028"],
+        "relatedShipments": ["SHP023"],
+        "timeline": [
+            { "time": "2026-06-23T16:00:00Z", "event": "Heavy monsoon rains begin", "type": "info" },
+            { "time": "2026-06-23T20:00:00Z", "event": "Container yards C and D flooded", "type": "warning" }
+        ],
+        "recommendedActions": [
+            "Delay non-urgent cargo to allow floodwater recession",
+            "Inspect all grounded containers for water damage",
+            "Coordinate with inland transport providers for road closures"
+        ]
+    },
+    {
+        "id": "INC018",
+        "title": "Crane Malfunction at Felixstowe Terminal",
+        "severity": "low",
+        "country": "United Kingdom",
+        "port": "Port of Felixstowe",
+        "portId": "PORT014",
+        "coordinates": [51.9536, 1.3096],
+        "detectedTime": "2026-06-24T06:30:00Z",
+        "source": "Hutchison Ports UK",
+        "status": "Monitoring",
+        "description": "Two ship-to-shore cranes at Trinity Terminal experiencing mechanical failures. Maintenance teams working on repairs with estimated 24-hour resolution. Remaining cranes handling operations with minor delays.",
+        "affectedPorts": ["PORT014"],
+        "relatedShipments": ["SHP018"],
+        "timeline": [
+            { "time": "2026-06-24T06:30:00Z", "event": "Crane STS-07 reports hydraulic failure", "type": "warning" },
+            { "time": "2026-06-24T07:00:00Z", "event": "Crane STS-09 taken offline for preventive inspection", "type": "info" }
+        ],
+        "recommendedActions": [
+            "Factor 6-12 hour additional handling time for vessels",
+            "Consider Southampton as alternative for time-critical cargo"
+        ]
+    },
+    {
+        "id": "INC019",
+        "title": "Environmental Protest Blocking Savannah Port Access",
+        "severity": "low",
+        "country": "USA",
+        "port": "Port of Savannah",
+        "portId": "PORT025",
+        "coordinates": [32.0835, -81.0998],
+        "detectedTime": "2026-06-23T15:00:00Z",
+        "source": "Georgia Ports Authority",
+        "status": "Resolved",
+        "description": "Environmental activist group briefly blocked the main truck access road to the port for approximately 6 hours before dispersal by law enforcement. Port operations were not directly affected but trucking in/out was delayed.",
+        "affectedPorts": ["PORT025"],
+        "relatedShipments": [],
+        "timeline": [
+            { "time": "2026-06-23T09:00:00Z", "event": "Protesters block main access road", "type": "warning" },
+            { "time": "2026-06-23T15:00:00Z", "event": "Road cleared by law enforcement — access restored", "type": "info" }
+        ],
+        "recommendedActions": [
+            "No further action needed — access fully restored",
+            "Check for any truck delivery delays from the disruption period"
+        ]
+    },
+    {
+        "id": "INC020",
+        "title": "Suspected Sanctions Violation at Salalah",
+        "severity": "medium",
+        "country": "Oman",
+        "port": "Port of Salalah",
+        "portId": "PORT045",
+        "coordinates": [16.9385, 54.0040],
+        "detectedTime": "2026-06-23T11:00:00Z",
+        "source": "Oman Maritime Authority",
+        "status": "Active",
+        "description": "Omani authorities have detained a vessel suspected of carrying sanctioned cargo. Enhanced inspection protocols activated for all vessels calling at Salalah. Expect additional screening delays of 12-24 hours.",
+        "affectedPorts": ["PORT045"],
+        "relatedShipments": ["SHP015"],
+        "timeline": [
+            { "time": "2026-06-23T09:00:00Z", "event": "Intelligence report on suspected vessel received", "type": "info" },
+            { "time": "2026-06-23T11:00:00Z", "event": "Vessel detained — enhanced screening activated", "type": "warning" }
+        ],
+        "recommendedActions": [
+            "Ensure all cargo documentation is complete and accurate",
+            "Allow 24-hour buffer for enhanced screening",
+            "Verify sanctions compliance for all consignees"
+        ]
+    }
+]

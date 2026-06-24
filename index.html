@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Incident Indicator — Real-Time Maritime Intelligence Platform. Monitor maritime incidents, assess shipment risk, and visualize global shipping routes.">
+    <meta name="keywords" content="maritime, incident, shipping, logistics, risk, intelligence, dashboard">
+    <title>Smart Incident Indicator — Real-Time Maritime Intelligence</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/landing.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="landing-nav" id="landing-nav">
+        <a href="/" class="landing-nav__brand">
+            <div class="landing-nav__logo"><i class="fas fa-ship"></i></div>
+            <span class="landing-nav__name">Smart Incident Indicator</span>
+        </a>
+        <div class="landing-nav__links" id="nav-links">
+            <a href="#features">Features</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#tech">Technology</a>
+            <a href="#team">Team</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="landing-nav__cta">
+            <a href="/login" class="btn btn-ghost">Sign In</a>
+            <a href="/dashboard" class="btn btn-primary">Launch Dashboard</a>
+        </div>
+        <button class="landing-nav__mobile-btn" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav Menu -->
+    <div class="landing-nav__mobile-menu" id="mobile-nav-menu">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#tech">Technology</a>
+        <a href="#team">Team</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="/login">Sign In</a>
+        <a href="/dashboard" style="color: var(--color-primary-light);">Launch Dashboard</a>
+    </div>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__grid"></div>
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+
+        <div class="hero__content">
+            <div class="hero__badge">
+                <span class="dot dot-green dot-pulse"></span>
+                Live Maritime Intelligence
+            </div>
+            <h1>
+                <span class="gradient-text">Real-Time Maritime</span><br>
+                Intelligence Platform
+            </h1>
+            <p>Monitor global maritime incidents, assess shipment risk in real-time, and make data-driven decisions to protect your supply chain.</p>
+            <div class="hero__actions">
+                <a href="/dashboard" class="btn btn-primary btn-xl">
+                    <i class="fas fa-rocket"></i> Launch Dashboard
+                </a>
+                <a href="#features" class="btn btn-secondary btn-xl">
+                    <i class="fas fa-play-circle"></i> Explore Features
+                </a>
+            </div>
+        </div>
+
+        <div class="hero__scroll">
+            <span>Scroll to explore</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">Features</span>
+                <h2>Powerful Maritime Intelligence</h2>
+                <p>Everything you need to monitor, analyze, and respond to maritime incidents in one unified platform.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card__icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h3 class="feature-card__title">Real-Time Monitoring</h3>
+                    <p class="feature-card__desc">24/7 monitoring of global maritime incidents from multiple intelligence sources including weather, piracy, and port disruptions.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card__icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-card__title">Risk Assessment</h3>
+                    <p class="feature-card__desc">AI-powered risk scoring for every shipment, factoring in route, weather, geopolitical events, and port conditions.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card__icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="feature-card__title">Interactive Maps</h3>
+                    <p class="feature-card__desc">Visualize incidents, ports, and shipping routes on an interactive global map with real-time position tracking.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card__icon"><i class="fas fa-bell"></i></div>
+                    <h3 class="feature-card__title">Smart Alerts</h3>
+                    <p class="feature-card__desc">Instant notifications when incidents affect your shipments. Customizable severity thresholds and alert channels.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card__icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="feature-card__title">Advanced Analytics</h3>
+                    <p class="feature-card__desc">Deep insights into incident trends, risk distribution, and supply chain performance with customizable dashboards.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card__icon"><i class="fas fa-route"></i></div>
+                    <h3 class="feature-card__title">Route Optimization</h3>
+                    <p class="feature-card__desc">Intelligent rerouting recommendations based on current incidents, weather forecasts, and port congestion data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS SECTION ==================== -->
+    <section class="section stats-section" id="stats">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-item" data-aos="fade-up">
+                    <div class="stat-item__value"><span data-counter="50">0</span>+</div>
+                    <div class="stat-item__label">Ports Monitored</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item__value"><span data-counter="24">0</span>/7</div>
+                    <div class="stat-item__label">Real-Time Monitoring</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item__value"><span data-counter="99">0</span>%</div>
+                    <div class="stat-item__label">Uptime Guarantee</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item__value">&lt;<span data-counter="30">0</span>s</div>
+                    <div class="stat-item__label">Alert Latency</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCREENSHOTS SECTION ==================== -->
+    <section class="section" id="screenshots">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">Platform Preview</span>
+                <h2>Enterprise-Grade Dashboard</h2>
+                <p>A modern, intuitive interface designed for maritime operations teams.</p>
+            </div>
+
+            <div class="screenshots-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="screenshot-card hover-lift">
+                    <div class="screenshot-card__preview">
+                        <div class="screenshot-card__preview-content">
+                            <div class="screenshot-card__preview-sidebar"></div>
+                            <div class="screenshot-card__preview-main">
+                                <div class="screenshot-card__preview-navbar"></div>
+                                <div class="screenshot-card__preview-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screenshot-card__label">
+                        <h4>Dashboard Overview</h4>
+                        <p>Real-time stats, incidents, and shipment tracking</p>
+                    </div>
+                </div>
+                <div class="screenshot-card hover-lift">
+                    <div class="screenshot-card__preview" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);">
+                        <div class="screenshot-card__preview-content">
+                            <div class="screenshot-card__preview-sidebar"></div>
+                            <div class="screenshot-card__preview-main">
+                                <div class="screenshot-card__preview-navbar"></div>
+                                <div class="screenshot-card__preview-body" style="background: rgba(37, 99, 235, 0.1);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screenshot-card__label">
+                        <h4>Analytics & Charts</h4>
+                        <p>Incident trends, risk distribution, and forecasting</p>
+                    </div>
+                </div>
+                <div class="screenshot-card hover-lift">
+                    <div class="screenshot-card__preview" style="background: linear-gradient(135deg, #0F172A 0%, #020617 100%);">
+                        <div class="screenshot-card__preview-content" style="grid-template-columns: 1fr;">
+                            <div class="screenshot-card__preview-body" style="background: rgba(34, 197, 94, 0.08); border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                    <div class="screenshot-card__label">
+                        <h4>Live Map View</h4>
+                        <p>Global incident and shipping route visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WORKFLOW SECTION ==================== -->
+    <section class="section" id="workflow" style="background: var(--color-secondary); border-top: 1px solid var(--color-card-border); border-bottom: 1px solid var(--color-card-border);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">How It Works</span>
+                <h2>Streamlined Workflow</h2>
+                <p>From incident detection to response, our platform guides your team through every step.</p>
+            </div>
+
+            <div class="workflow-grid">
+                <div class="workflow-steps" data-aos="fade-right">
+                    <div class="workflow-step">
+                        <div class="workflow-step__number">1</div>
+                        <div class="workflow-step__content">
+                            <h4>Incident Detection</h4>
+                            <p>Our system continuously monitors global maritime intelligence feeds for new incidents.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-step__number">2</div>
+                        <div class="workflow-step__content">
+                            <h4>Port Identification</h4>
+                            <p>Affected ports are automatically identified and mapped to your active shipments.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-step__number">3</div>
+                        <div class="workflow-step__content">
+                            <h4>Risk Calculation</h4>
+                            <p>Each shipment receives a real-time risk score based on proximity and severity.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-step__number">4</div>
+                        <div class="workflow-step__content">
+                            <h4>Alert & Response</h4>
+                            <p>Stakeholders are notified with actionable recommendations for route optimization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="workflow-visual" data-aos="fade-left">
+                    <div class="workflow-visual__mockup animate-float-slow">
+                        <div class="workflow-visual__mockup-bar">
+                            <div class="workflow-visual__mockup-dot" style="background: #EF4444;"></div>
+                            <div class="workflow-visual__mockup-dot" style="background: #FACC15;"></div>
+                            <div class="workflow-visual__mockup-dot" style="background: #22C55E;"></div>
+                        </div>
+                        <div class="workflow-visual__mockup-content">
+                            <div class="workflow-visual__mockup-block" style="background: rgba(37, 99, 235, 0.2);"></div>
+                            <div class="workflow-visual__mockup-block" style="background: rgba(56, 189, 248, 0.2);"></div>
+                            <div class="workflow-visual__mockup-block--wide" style="background: rgba(34, 197, 94, 0.1); border-radius: 8px;"></div>
+                            <div class="workflow-visual__mockup-block" style="background: rgba(239, 68, 68, 0.15);"></div>
+                            <div class="workflow-visual__mockup-block" style="background: rgba(250, 204, 21, 0.15);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TECH STACK SECTION ==================== -->
+    <section class="section" id="tech">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">Technology</span>
+                <h2>Built with Modern Tech</h2>
+                <p>Enterprise-grade technology stack for reliability and performance.</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="tech-card__icon"><i class="fab fa-html5"></i></div>
+                    <div class="tech-card__name">HTML5</div>
+                    <div class="tech-card__desc">Semantic structure</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card__icon"><i class="fab fa-css3-alt"></i></div>
+                    <div class="tech-card__name">CSS3 + Tailwind</div>
+                    <div class="tech-card__desc">Modern styling</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="tech-card__icon"><i class="fab fa-js-square"></i></div>
+                    <div class="tech-card__name">JavaScript ES6+</div>
+                    <div class="tech-card__desc">Modular logic</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-card__icon"><i class="fab fa-node-js"></i></div>
+                    <div class="tech-card__name">Node.js</div>
+                    <div class="tech-card__desc">Backend runtime</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="tech-card__icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="tech-card__name">Chart.js</div>
+                    <div class="tech-card__desc">Data visualization</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-card__icon"><i class="fas fa-map"></i></div>
+                    <div class="tech-card__name">Leaflet.js</div>
+                    <div class="tech-card__desc">Interactive maps</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="tech-card__icon"><i class="fas fa-server"></i></div>
+                    <div class="tech-card__name">Express.js</div>
+                    <div class="tech-card__desc">API server</div>
+                </div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-card__icon"><i class="fas fa-database"></i></div>
+                    <div class="tech-card__name">REST API</div>
+                    <div class="tech-card__desc">Data endpoints</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TEAM SECTION ==================== -->
+    <section class="section" id="team" style="background: var(--color-secondary); border-top: 1px solid var(--color-card-border); border-bottom: 1px solid var(--color-card-border);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">Our Team</span>
+                <h2>Built by Experts</h2>
+                <p>A dedicated team of maritime technology professionals.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #2563EB, #38BDF8);">VK</div>
+                    <h4 class="team-card__name">Vishw Kant</h4>
+                    <p class="team-card__role">Full Stack Developer</p>
+                    <div class="team-card__socials">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #8B5CF6, #EC4899);">SA</div>
+                    <h4 class="team-card__name">Sakshi A.</h4>
+                    <p class="team-card__role">UI/UX Designer</p>
+                    <div class="team-card__socials">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #22C55E, #14B8A6);">RK</div>
+                    <h4 class="team-card__name">Rahul K.</h4>
+                    <p class="team-card__role">Data Analyst</p>
+                    <div class="team-card__socials">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card__avatar" style="background: linear-gradient(135deg, #F97316, #FACC15);">NP</div>
+                    <h4 class="team-card__name">Neha P.</h4>
+                    <p class="team-card__role">Backend Engineer</p>
+                    <div class="team-card__socials">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about the Smart Incident Indicator platform.</p>
+            </div>
+
+            <div class="faq-list" data-aos="fade-up">
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        What data sources does the platform use?
+                        <i class="faq-item__icon fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-content">
+                            We aggregate data from multiple maritime intelligence sources including the IMB Piracy Reporting Centre, national meteorological departments, port authorities worldwide, NATO maritime advisories, and coastal surveillance systems. All data is verified and cross-referenced before being displayed on the platform.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        How is the risk score calculated?
+                        <i class="faq-item__icon fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-content">
+                            The risk score (0-100) is calculated using a multi-factor algorithm that considers: incident severity, proximity to the shipment route, number of affected ports on the route, historical incident frequency in the region, current weather conditions, and geopolitical stability of transit zones.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        Can I integrate this with our existing logistics software?
+                        <i class="faq-item__icon fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-content">
+                            Yes! The platform provides a RESTful API that can be integrated with any existing logistics, ERP, or supply chain management system. We support JSON data exchange and webhook notifications for real-time event streaming.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        Is there mobile support?
+                        <i class="faq-item__icon fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-content">
+                            The platform is fully responsive and works across all devices — desktop, tablet, and mobile. The dashboard automatically adapts its layout for optimal viewing on any screen size.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        How often is the data updated?
+                        <i class="faq-item__icon fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-content">
+                            Incident data is updated in near real-time with an average latency of under 30 seconds from source detection to dashboard display. Port status and weather data refresh every 5 minutes, while shipment tracking updates every 15 minutes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section" data-aos="fade-up">
+                <h2>Ready to Secure Your Supply Chain?</h2>
+                <p>Start monitoring maritime incidents and protecting your shipments today.</p>
+                <a href="/dashboard" class="btn btn-xl">
+                    <i class="fas fa-arrow-right"></i> Get Started Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section" id="contact" style="background: var(--color-secondary); border-top: 1px solid var(--color-card-border);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__label">Contact</span>
+                <h2>Get In Touch</h2>
+                <p>Have questions? We'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-grid" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="contact-info__label">Email</div>
+                            <div class="contact-info__value">hello@smartincident.io</div>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="contact-info__label">Phone</div>
+                            <div class="contact-info__value">+91 98765 43210</div>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="contact-info__label">Location</div>
+                            <div class="contact-info__value">Mumbai, India</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" rows="4" placeholder="Your Message" required style="resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="landing-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="landing-nav__brand" style="margin-bottom: 8px;">
+                        <div class="landing-nav__logo"><i class="fas fa-ship"></i></div>
+                        <span class="landing-nav__name">Smart Incident Indicator</span>
+                    </a>
+                    <p class="footer-brand__desc">Real-Time Maritime Intelligence Platform. Protecting global supply chains through proactive incident monitoring and risk assessment.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col__title">Product</h4>
+                    <div class="footer-col__links">
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/analytics">Analytics</a>
+                        <a href="/map">Live Map</a>
+                        <a href="/shipments">Shipments</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col__title">Resources</h4>
+                    <div class="footer-col__links">
+                        <a href="#">Documentation</a>
+                        <a href="#">API Reference</a>
+                        <a href="#">Changelog</a>
+                        <a href="#">Status</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col__title">Company</h4>
+                    <div class="footer-col__links">
+                        <a href="#team">About Us</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Smart Incident Indicator. All rights reserved.</span>
+                <div class="footer-bottom__socials">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 600, easing: 'ease-out', once: true, offset: 50 });
+
+        // Navbar scroll effect
+        const nav = document.getElementById('landing-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-item__question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                // Toggle current
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Animated counters on scroll
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-counter'));
+                    if (target && !el.dataset.animated) {
+                        el.dataset.animated = 'true';
+                        animateValue(el, 0, target, 2000);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+
+        function animateValue(el, start, end, duration) {
+            const startTime = performance.now();
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(start + (end - start) * eased);
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        // Mobile nav toggle
+        const mobileToggle = document.getElementById('mobile-nav-toggle');
+        const mobileMenu = document.getElementById('mobile-nav-menu');
+        const mobileOverlay = document.getElementById('mobile-nav-overlay');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+            });
+        }
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            });
+        }
+
+        // Close mobile menu on link click
+        mobileMenu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

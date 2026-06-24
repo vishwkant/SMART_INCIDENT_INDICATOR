@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Settings — Smart Incident Indicator. Configure your profile, notification preferences, system themes, and security options.">
+    <title>Settings — Smart Incident Indicator</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="page-loader__content">
+            <div class="page-loader__spinner"></div>
+            <p class="page-loader__text">Loading Settings...</p>
+        </div>
+    </div>
+
+    <!-- App Layout -->
+    <div class="app-layout">
+        <!-- Sidebar Container (loaded by app.js) -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Navbar Container -->
+            <div id="navbar-container"></div>
+
+            <!-- Page Content -->
+            <main class="page-content" role="main">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <a href="/dashboard" class="breadcrumbs__item">Home</a>
+                    <span class="breadcrumbs__separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="breadcrumbs__item breadcrumbs__item--active">Settings</span>
+                </div>
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-header__left">
+                        <h1 class="page-header__title">Account & System Settings</h1>
+                        <p class="page-header__subtitle">Manage your personal profile, alert criteria, integrations, and preferences</p>
+                    </div>
+                </div>
+
+                <!-- Settings Layout -->
+                <div class="settings-layout">
+                    <!-- Tabs Navigation Sidebar -->
+                    <nav class="settings-tabs" aria-label="Settings Categories">
+                        <button class="settings-tab settings-tab--active" data-target="tab-profile">
+                            <i class="fas fa-user-circle"></i> Profile Settings
+                        </button>
+                        <button class="settings-tab" data-target="tab-notifications">
+                            <i class="fas fa-bell"></i> Notifications
+                        </button>
+                        <button class="settings-tab" data-target="tab-theme">
+                            <i class="fas fa-sliders-h"></i> System Preferences
+                        </button>
+                        <button class="settings-tab" data-target="tab-security">
+                            <i class="fas fa-shield-alt"></i> Security & Access
+                        </button>
+                    </nav>
+
+                    <!-- Settings Sections Container -->
+                    <div class="settings-content">
+
+                        <!-- Tab 1: Profile Settings -->
+                        <div class="settings-tab-panel" id="tab-profile">
+                            <form id="form-profile" onsubmit="return false;">
+                                <div class="settings-section">
+                                    <h2 class="settings-section__title">User Profile</h2>
+                                    <p class="settings-section__desc">Update your personal information and organization settings.</p>
+
+                                    <div class="profile-header">
+                                        <div class="profile-avatar" id="avatar-initials">VK</div>
+                                        <div class="profile-info">
+                                            <h3 class="profile-info__name" id="display-name">Vishw Kant</h3>
+                                            <p class="profile-info__email">vishw.kant@maritime-intel.com</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label" for="profile-first-name">First Name</label>
+                                            <input type="text" class="form-input" id="profile-first-name" value="Vishw">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="profile-last-name">Last Name</label>
+                                            <input type="text" class="form-input" id="profile-last-name" value="Kant">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="profile-email">Email Address</label>
+                                            <input type="email" class="form-input" id="profile-email" value="vishw.kant@maritime-intel.com" disabled>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="profile-phone">Phone Number</label>
+                                            <input type="tel" class="form-input" id="profile-phone" value="+91 98765 43210">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="profile-role">Role</label>
+                                            <input type="text" class="form-input" id="profile-role" value="Director of Logistics Operations" disabled>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="profile-dept">Department</label>
+                                            <input type="text" class="form-input" id="profile-dept" value="Global Risk Management" disabled>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                                        <button class="btn btn-primary" id="btn-save-profile">Save Profile Changes</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Tab 2: Notifications Preference -->
+                        <div class="settings-tab-panel hidden" id="tab-notifications">
+                            <form id="form-notifications" onsubmit="return false;">
+                                <div class="settings-section">
+                                    <h2 class="settings-section__title">Notification Preferences</h2>
+                                    <p class="settings-section__desc">Select how and when you want to receive risk indicator alerts.</p>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Critical Incident Email Alerts</div>
+                                            <div class="settings-row__desc">Get instant email warnings when high/critical incidents occur near your active routes.</div>
+                                        </div>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="notify-critical-email" checked>
+                                            <label for="notify-critical-email"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">SMS Priority Broadcasts</div>
+                                            <div class="settings-row__desc">Direct mobile alerts for vessel rerouting and weather emergencies.</div>
+                                        </div>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="notify-sms" checked>
+                                            <label for="notify-sms"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Weekly Risk Summary Reports</div>
+                                            <div class="settings-row__desc">Receive a compiled digest and performance index of your shipment risks every Monday morning.</div>
+                                        </div>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="notify-weekly-digest">
+                                            <label for="notify-weekly-digest"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Browser Push Notifications</div>
+                                            <div class="settings-row__desc">Real-time desktop banners while the dashboard application is running.</div>
+                                        </div>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="notify-browser-push" checked>
+                                            <label for="notify-browser-push"></label>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                                        <button class="btn btn-primary" id="btn-save-notifications">Save Notification Preferences</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Tab 3: System & Theme Preferences -->
+                        <div class="settings-tab-panel hidden" id="tab-theme">
+                            <form id="form-theme" onsubmit="return false;">
+                                <div class="settings-section">
+                                    <h2 class="settings-section__title">Theme & Layout</h2>
+                                    <p class="settings-section__desc">Customize your dashboard display and visual interface options.</p>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Select Theme</div>
+                                            <div class="settings-row__desc">Toggle between visual modes or inherit your operating system default.</div>
+                                        </div>
+                                        <div>
+                                            <select class="form-select" id="theme-select" style="min-width: 150px;">
+                                                <option value="dark">Dark Theme (Default)</option>
+                                                <option value="light">Light Theme</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Density Layout</div>
+                                            <div class="settings-row__desc">Compact table density layout for intensive shipment tracking.</div>
+                                        </div>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="layout-density" checked>
+                                            <label for="layout-density"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Live Data Refresh (Interval)</div>
+                                            <div class="settings-row__desc">Frequency of automated API calls to pull recent incidents.</div>
+                                        </div>
+                                        <div>
+                                            <select class="form-select" id="refresh-interval" style="min-width: 150px;">
+                                                <option value="30">Every 30 seconds</option>
+                                                <option value="60">Every 1 minute</option>
+                                                <option value="300" selected>Every 5 minutes</option>
+                                                <option value="0">Manual reload only</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                                        <button class="btn btn-primary" id="btn-save-theme">Save Preferences</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Tab 4: Security & Access -->
+                        <div class="settings-tab-panel hidden" id="tab-security">
+                            <form id="form-security" onsubmit="return false;">
+                                <div class="settings-section">
+                                    <h2 class="settings-section__title">Change Password</h2>
+                                    <p class="settings-section__desc">Maintain account protection with regular password updates.</p>
+
+                                    <div class="form-grid">
+                                        <div class="form-group" style="grid-column: 1 / -1;">
+                                            <label class="form-label" for="sec-current-password">Current Password</label>
+                                            <input type="password" class="form-input" id="sec-current-password" placeholder="Enter current password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="sec-new-password">New Password</label>
+                                            <input type="password" class="form-input" id="sec-new-password" placeholder="Minimum 8 characters">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="sec-confirm-password">Confirm New Password</label>
+                                            <input type="password" class="form-input" id="sec-confirm-password" placeholder="Repeat new password">
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+                                        <button class="btn btn-primary" id="btn-save-password">Update Password</button>
+                                    </div>
+                                </div>
+
+                                <div class="settings-section">
+                                    <h2 class="settings-section__title">API Integrations</h2>
+                                    <p class="settings-section__desc">Secure tokens to pull raw incident streams programmatically.</p>
+
+                                    <div class="settings-row">
+                                        <div>
+                                            <div class="settings-row__label">Access Credentials</div>
+                                            <div class="settings-row__desc" style="font-family: monospace; font-size: 0.75rem; color: var(--color-accent); margin-top: 4px;">sii_key_live_99d25e83a48e715bc9c20a4</div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-secondary btn-sm" id="btn-rotate-api">Rotate Token</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            <div id="footer-container"></div>
+        </div>
+    </div>
+
+    <!-- App Scripts -->
+    <script type="module" src="/assets/js/app.js"></script>
+    <script type="module" src="/assets/js/settings.js"></script>
+</body>
+</html>

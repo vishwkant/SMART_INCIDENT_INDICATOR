@@ -1,0 +1,121 @@
+<!-- ============================================================
+     navbar.html — Top Navigation Bar Component
+     Smart Incident Indicator
+     ============================================================ -->
+
+<header class="navbar" role="banner">
+
+    <!-- Left Section -->
+    <div class="navbar__left">
+        <!-- Mobile hamburger -->
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open sidebar menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Search Bar -->
+        <div class="navbar__search">
+            <i class="fas fa-search navbar__search-icon"></i>
+            <input 
+                type="text" 
+                class="navbar__search-input" 
+                id="navbar-search"
+                placeholder="Search incidents, shipments, ports... (Ctrl+K)" 
+                aria-label="Global search"
+            />
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="navbar__right">
+
+        <!-- Live Clock -->
+        <div class="navbar__clock" id="live-clock" aria-label="Current time">--:--:-- --</div>
+
+        <!-- Theme Toggle -->
+        <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme" data-tooltip="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+
+        <!-- Notifications -->
+        <div class="dropdown navbar__notification">
+            <button class="btn-icon" id="notification-btn" aria-label="View notifications" data-tooltip="Notifications">
+                <i class="fas fa-bell"></i>
+                <span class="navbar__notification-count">5</span>
+            </button>
+            <div class="dropdown__menu" id="notification-dropdown">
+                <div style="padding: 12px 16px; border-bottom: 1px solid var(--color-card-border);">
+                    <strong style="font-size: 0.875rem; color: var(--color-text);">Notifications</strong>
+                </div>
+                <div style="max-height: 300px; overflow-y: auto;">
+                    <button class="dropdown__item">
+                        <span style="color: var(--color-red);"><i class="fas fa-exclamation-circle"></i></span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.75rem;">Critical: Cyclone approaching Mumbai</div>
+                            <div style="font-size: 0.6875rem; color: var(--color-text-muted);">2 hours ago</div>
+                        </div>
+                    </button>
+                    <button class="dropdown__item">
+                        <span style="color: var(--color-red);"><i class="fas fa-skull-crossbones"></i></span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.75rem;">Piracy alert: Gulf of Aden</div>
+                            <div style="font-size: 0.6875rem; color: var(--color-text-muted);">3 hours ago</div>
+                        </div>
+                    </button>
+                    <button class="dropdown__item">
+                        <span style="color: var(--color-orange);"><i class="fas fa-exclamation-triangle"></i></span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.75rem;">Rotterdam port strike began</div>
+                            <div style="font-size: 0.6875rem; color: var(--color-text-muted);">5 hours ago</div>
+                        </div>
+                    </button>
+                    <button class="dropdown__item">
+                        <span style="color: var(--color-yellow);"><i class="fas fa-shield-alt"></i></span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.75rem;">Antwerp ransomware attack</div>
+                            <div style="font-size: 0.6875rem; color: var(--color-text-muted);">6 hours ago</div>
+                        </div>
+                    </button>
+                    <button class="dropdown__item">
+                        <span style="color: var(--color-accent);"><i class="fas fa-info-circle"></i></span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 0.75rem;">SHP010 diverted to Subic Bay</div>
+                            <div style="font-size: 0.6875rem; color: var(--color-text-muted);">7 hours ago</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="dropdown__divider"></div>
+                <button class="dropdown__item" style="justify-content: center; color: var(--color-primary-light);">
+                    View All Notifications
+                </button>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="dropdown">
+            <div class="navbar__profile" id="profile-btn">
+                <div class="navbar__avatar">AK</div>
+                <div class="navbar__user-info">
+                    <span class="navbar__username">Admin User</span>
+                    <span class="navbar__user-role">Operations</span>
+                </div>
+            </div>
+            <div class="dropdown__menu" id="profile-dropdown">
+                <button class="dropdown__item">
+                    <i class="fas fa-user"></i> My Profile
+                </button>
+                <button class="dropdown__item">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+                <button class="dropdown__item">
+                    <i class="fas fa-question-circle"></i> Help & Support
+                </button>
+                <div class="dropdown__divider"></div>
+                <a href="/" class="dropdown__item" style="color: var(--color-red);">
+                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</header>

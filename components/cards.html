@@ -1,0 +1,84 @@
+<!-- ============================================================
+     cards.html — Reusable Card Templates Reference
+     Smart Incident Indicator
+     ============================================================
+     This file serves as a reference for card HTML patterns
+     used across the application. Cards are generated dynamically
+     by JavaScript modules, but this file documents the HTML
+     structure for each card type.
+     ============================================================ -->
+
+<!-- ======================== STAT CARD ======================== -->
+<!--
+<div class="stat-card">
+    <div class="stat-card__icon stat-card__icon--blue">
+        <i class="fas fa-ship"></i>
+    </div>
+    <div class="stat-card__label">Total Active Shipments</div>
+    <div class="stat-card__value" data-counter="128">0</div>
+    <div class="stat-card__change stat-card__change--up">
+        <i class="fas fa-arrow-up"></i> 12% from last week
+    </div>
+</div>
+-->
+
+<!-- ==================== INCIDENT CARD ======================== -->
+<!--
+<div class="incident-card incident-card--critical">
+    <div class="incident-card__header">
+        <h4 class="incident-card__title">Severe Tropical Cyclone in Bay of Bengal</h4>
+        <span class="badge badge-critical">
+            <i class="fas fa-exclamation-circle"></i> Critical
+        </span>
+    </div>
+    <div class="incident-card__meta">
+        <span class="incident-card__meta-item">
+            <i class="fas fa-map-marker-alt"></i> India
+        </span>
+        <span class="incident-card__meta-item">
+            <i class="fas fa-anchor"></i> Port of Mumbai
+        </span>
+        <span class="incident-card__meta-item">
+            <i class="fas fa-clock"></i> 2 hours ago
+        </span>
+    </div>
+    <div class="incident-card__footer">
+        <span class="incident-card__source">Source: IMD</span>
+        <button class="btn btn-sm btn-secondary">View Details</button>
+    </div>
+</div>
+-->
+
+<!-- ==================== SHIPMENT ROW ========================= -->
+<!--
+<div class="shipment-row">
+    <div class="shipment-row__route">
+        <div class="shipment-row__route-text">
+            Shanghai <span class="shipment-row__route-arrow">→</span> Rotterdam
+        </div>
+        <div class="shipment-row__eta">ETA: Jul 02, 2026</div>
+    </div>
+    <div class="shipment-row__risk">
+        <div class="risk-meter">
+            <div class="risk-meter__bar">
+                <div class="risk-meter__fill" style="width: 72%; background: var(--color-orange);"></div>
+            </div>
+            <span class="risk-meter__value" style="color: var(--color-orange);">72</span>
+        </div>
+    </div>
+    <span class="badge badge-high">High</span>
+</div>
+-->
+
+<!-- ==================== ACTIVITY ITEM ======================== -->
+<!--
+<div class="activity-item">
+    <div class="activity-item__icon" style="background: rgba(239, 68, 68, 0.15); color: var(--color-red);">
+        <i class="fas fa-exclamation-circle"></i>
+    </div>
+    <div class="activity-item__content">
+        <div class="activity-item__title">New critical incident detected</div>
+        <div class="activity-item__time">2 minutes ago</div>
+    </div>
+</div>
+-->

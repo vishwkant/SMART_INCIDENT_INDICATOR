@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maritime Map — Smart Incident Indicator. Real-time global view of incident hotspots, port disruptions, and active shipping routes.">
+    <title>Live Map — Smart Incident Indicator</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="page-loader__content">
+            <div class="page-loader__spinner"></div>
+            <p class="page-loader__text">Loading Global Map...</p>
+        </div>
+    </div>
+
+    <!-- App Layout -->
+    <div class="app-layout">
+        <!-- Sidebar Container (loaded by app.js) -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Navbar Container -->
+            <div id="navbar-container"></div>
+
+            <!-- Page Content -->
+            <main class="page-content" role="main" style="display: flex; flex-direction: column; height: calc(100vh - var(--navbar-height)); padding-bottom: 0;">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs" style="margin-bottom: 12px;">
+                    <a href="/dashboard" class="breadcrumbs__item">Home</a>
+                    <span class="breadcrumbs__separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="breadcrumbs__item breadcrumbs__item--active">Live Map</span>
+                </div>
+
+                <!-- Page Header -->
+                <div class="page-header" style="margin-bottom: 16px;">
+                    <div class="page-header__left">
+                        <h1 class="page-header__title">Live Maritime Map</h1>
+                        <p class="page-header__subtitle">Real-time global tracking of incidents, routes, and port conditions</p>
+                    </div>
+                </div>
+
+                <!-- Map Page Container -->
+                <div class="map-page" style="flex: 1; margin-bottom: 24px; position: relative;">
+                    <div class="map-container">
+                        <!-- Leaflet Map Container -->
+                        <div id="map"></div>
+
+                        <!-- Map Controls Overlaid -->
+                        <div class="map-controls">
+                            <button class="btn btn-secondary btn-sm" id="btn-reset-view" title="Reset Map View">
+                                <i class="fas fa-crosshairs"></i> Reset View
+                            </button>
+                            <button class="btn btn-secondary btn-sm" id="btn-toggle-incidents" title="Toggle Incident Hotspots">
+                                <i class="fas fa-exclamation-triangle"></i> Incidents
+                            </button>
+                            <button class="btn btn-secondary btn-sm" id="btn-toggle-ports" title="Toggle Ports Visibility">
+                                <i class="fas fa-anchor"></i> Ports
+                            </button>
+                            <button class="btn btn-secondary btn-sm" id="btn-toggle-routes" title="Toggle Active Routes">
+                                <i class="fas fa-route"></i> Routes
+                            </button>
+                        </div>
+
+                        <!-- Info Overlay Panels (Top-Left) -->
+                        <div class="map-info-panel">
+                            <div class="map-info-card">
+                                <div class="map-info-card__value" id="info-critical-count">0</div>
+                                <div class="map-info-card__label">Critical Incidents</div>
+                            </div>
+                            <div class="map-info-card">
+                                <div class="map-info-card__value" id="info-transit-count">0</div>
+                                <div class="map-info-card__label">Ships In Transit</div>
+                            </div>
+                            <div class="map-info-card">
+                                <div class="map-info-card__value" id="info-disrupted-count">0</div>
+                                <div class="map-info-card__label">Disrupted Ports</div>
+                            </div>
+                        </div>
+
+                        <!-- Map Legend (Bottom-Left) -->
+                        <div class="map-legend">
+                            <div class="map-legend__title">Map Legend</div>
+                            
+                            <!-- Incidents -->
+                            <div class="map-legend__item">
+                                <span class="map-legend__dot" style="background: var(--color-red);"></span>
+                                <span>Critical Incident</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__dot" style="background: var(--color-orange);"></span>
+                                <span>High Alert</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__dot" style="background: var(--color-yellow);"></span>
+                                <span>Medium Concern</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__dot" style="background: var(--color-green);"></span>
+                                <span>Low/Resolved</span>
+                            </div>
+
+                            <hr style="border: 0; border-top: 1px solid var(--color-card-border); margin: 8px 0;">
+
+                            <!-- Ports -->
+                            <div class="map-legend__item">
+                                <span class="map-legend__dot" style="background: var(--color-accent); border: 2px solid #fff;"></span>
+                                <span>Operational Port</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__dot" style="background: #ef4444; border: 2px solid #fff;"></span>
+                                <span>Disrupted Port</span>
+                            </div>
+
+                            <hr style="border: 0; border-top: 1px solid var(--color-card-border); margin: 8px 0;">
+
+                            <!-- Routes -->
+                            <div class="map-legend__item">
+                                <span class="map-legend__line" style="background: var(--color-primary-light);"></span>
+                                <span>Active Ship Route</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__line" style="background: #94a3b8; border-top: 2px dashed #94a3b8; background: transparent;"></span>
+                                <span>Planned/Historical Transit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- App Scripts -->
+    <script type="module" src="/assets/js/app.js"></script>
+    <script type="module" src="/assets/js/map.js"></script>
+</body>
+</html>

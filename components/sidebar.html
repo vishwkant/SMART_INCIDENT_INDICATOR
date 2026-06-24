@@ -1,0 +1,77 @@
+<!-- ============================================================
+     sidebar.html — Sidebar Navigation Component
+     Smart Incident Indicator
+     ============================================================ -->
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <div class="sidebar__logo">
+        <div class="sidebar__logo-icon">
+            <i class="fas fa-ship"></i>
+        </div>
+        <div class="sidebar__logo-text">
+            <span class="sidebar__logo-title">Smart Incident</span>
+            <span class="sidebar__logo-subtitle">Indicator Platform</span>
+        </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="sidebar__nav">
+
+        <!-- Main Section -->
+        <div class="sidebar__section-label">Main</div>
+
+        <a href="/dashboard" class="sidebar__link" data-page="dashboard" aria-label="Dashboard">
+            <span class="sidebar__link-icon"><i class="fas fa-th-large"></i></span>
+            <span class="sidebar__link-text">Dashboard</span>
+        </a>
+
+        <a href="/incidents" class="sidebar__link" data-page="incidents" aria-label="Incidents">
+            <span class="sidebar__link-icon"><i class="fas fa-exclamation-triangle"></i></span>
+            <span class="sidebar__link-text">Incidents</span>
+            <span class="sidebar__link-badge">5</span>
+        </a>
+
+        <a href="/shipments" class="sidebar__link" data-page="shipments" aria-label="Shipments">
+            <span class="sidebar__link-icon"><i class="fas fa-boxes"></i></span>
+            <span class="sidebar__link-text">Shipments</span>
+        </a>
+
+        <!-- Analytics Section -->
+        <div class="sidebar__section-label">Intelligence</div>
+
+        <a href="/analytics" class="sidebar__link" data-page="analytics" aria-label="Analytics">
+            <span class="sidebar__link-icon"><i class="fas fa-chart-bar"></i></span>
+            <span class="sidebar__link-text">Analytics</span>
+        </a>
+
+        <a href="/map" class="sidebar__link" data-page="map" aria-label="Live Map">
+            <span class="sidebar__link-icon"><i class="fas fa-map-marked-alt"></i></span>
+            <span class="sidebar__link-text">Live Map</span>
+        </a>
+
+        <!-- System Section -->
+        <div class="sidebar__section-label">System</div>
+
+        <a href="/settings" class="sidebar__link" data-page="settings" aria-label="Settings">
+            <span class="sidebar__link-icon"><i class="fas fa-cog"></i></span>
+            <span class="sidebar__link-text">Settings</span>
+        </a>
+
+    </nav>
+
+    <!-- Footer -->
+    <div class="sidebar__footer">
+        <button class="sidebar__collapse-btn" id="sidebar-collapse-btn" aria-label="Toggle sidebar">
+            <i class="fas fa-chevron-left"></i>
+            <span class="sidebar__collapse-text">Collapse</span>
+        </button>
+        <div class="sidebar__version">v1.0.0 — Hackathon MVP</div>
+    </div>
+
+</aside>
+
+<!-- Mobile overlay backdrop -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>

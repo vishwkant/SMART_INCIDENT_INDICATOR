@@ -1,0 +1,23 @@
+{
+  "name": "smart-incident-indicator",
+  "version": "1.0.0",
+  "description": "Real-Time Maritime Intelligence Platform — Monitor maritime incidents, assess shipment risk, and visualize global shipping routes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "maritime",
+    "incident",
+    "logistics",
+    "shipping",
+    "dashboard",
+    "intelligence"
+  ],
+  "author": "Smart Incident Indicator Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
